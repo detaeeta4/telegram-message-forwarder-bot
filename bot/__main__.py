@@ -22,7 +22,7 @@ def work(client, message):
           if caption:
             message.copy(chat, caption=caption)
           elif msg:
-            app.send_message(chat, msg, parse_mode="html")
+            app.send_message(chat, msg, parse_mode="html", disable_web_page_preview=True)
           else:
             message.copy(chat)
       except Exception as e:
